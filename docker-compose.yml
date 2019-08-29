@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  labrador:
+    container_name: labrador
+    # image: example/test:${TEST_VERSION}
+    build:
+      context: ./0dockerfile
+    # restart: unless-stoppedcat 
+    # env_file: .env
+    volumes:
+      - ./data:/data
+      - /mnt/media/Comum/Musicas:/music:ro
+    ports:
+      - "5000:80"
