@@ -1,7 +1,0 @@
-Waiting for container labrador...
-[3J[H[2Jmkdir -p /data/labrador-linux/build
-make -C /data/labrador-linux/linux O=/data/labrador-linux/build CROSS_COMPILE=arm-linux-gnueabihf- ARCH=arm caninos_labrador_defconfig
-make[1]: Entering directory '/data/labrador-linux/linux'
-make[2]: Entering directory '/data/labrador-linux/build'
-^Cmake[1]: *** [Makefile:146: sub-make] Interrupt
-make: *** [Makefile:10: config] Interrupt
