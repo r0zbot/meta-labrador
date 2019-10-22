@@ -1,0 +1,87 @@
+LPC functions (36):
+
+static phy_interface_t lpc_phy_interface_mode(struct device *dev)
+static bool use_iram_for_net(struct device *dev)
+static void __lpc_set_mac(struct netdata_local *pldat, u8 *mac)
+static void __lpc_get_mac(struct netdata_local *pldat, u8 *mac)
+static void __lpc_params_setup(struct netdata_local *pldat)
+static void __lpc_eth_reset(struct netdata_local *pldat)
+static int __lpc_mii_mngt_reset(struct netdata_local *pldat)
+static inline phys_addr_t __va_to_pa(void *addr, struct netdata_local *pldat)
+static void lpc_eth_enable_int(void __iomem *regbase)
+static void lpc_eth_disable_int(void __iomem *regbase)
+static void __lpc_txrx_desc_setup(struct netdata_local *pldat)
+static void __lpc_eth_init(struct netdata_local *pldat)
+static void __lpc_eth_shutdown(struct netdata_local *pldat)
+static int lpc_mdio_read(struct mii_bus *bus, int phy_id, int phyreg)
+static int lpc_mdio_write(struct mii_bus *bus, int phy_id, int phyreg,
+static int lpc_mdio_reset(struct mii_bus *bus)
+static void lpc_handle_link_change(struct net_device *ndev)
+static int lpc_mii_probe(struct net_device *ndev)
+static int lpc_mii_init(struct netdata_local *pldat)
+static void __lpc_handle_xmit(struct net_device *ndev)
+static int __lpc_handle_recv(struct net_device *ndev, int budget)
+static int lpc_eth_poll(struct napi_struct *napi, int budget)
+static irqreturn_t __lpc_eth_interrupt(int irq, void *dev_id)
+static int lpc_eth_close(struct net_device *ndev)
+static int lpc_eth_hard_start_xmit(struct sk_buff *skb, struct net_device *ndev)
+static int lpc_set_mac_address(struct net_device *ndev, void *p)
+static void lpc_eth_set_multicast_list(struct net_device *ndev)
+static int lpc_eth_ioctl(struct net_device *ndev, struct ifreq *req, int cmd)
+static int lpc_eth_open(struct net_device *ndev)
+static void lpc_eth_ethtool_getdrvinfo(struct net_device *ndev, struct ethtool_drvinfo *info)
+static u32 lpc_eth_ethtool_getmsglevel(struct net_device *ndev)
+static void lpc_eth_ethtool_setmsglevel(struct net_device *ndev, u32 level)
+static int lpc_eth_drv_probe(struct platform_device *pdev)
+static int lpc_eth_drv_remove(struct platform_device *pdev)
+static int lpc_eth_drv_suspend(struct platform_device *pdev, pm_message_t state)
+static int lpc_eth_drv_resume(struct platform_device *pdev)
+
+
+
+
+
+Helpers:
+static irqreturn_t __lpc_eth_interrupt(int irq, void *dev_id)
+static void __lpc_txrx_desc_setup(struct netdata_local *pldat)
+static void __lpc_eth_init(struct netdata_local *pldat)
+static void __lpc_eth_shutdown(struct netdata_local *pldat)
+static void __lpc_eth_reset(struct netdata_local *pldat)
+static int __lpc_mii_mngt_reset(struct netdata_local *pldat)
+static void __lpc_handle_xmit(struct net_device *ndev)
+static int __lpc_handle_recv(struct net_device *ndev, int budget)
+
+Getters and setters:
+static void lpc_eth_ethtool_getdrvinfo(struct net_device *ndev, struct ethtool_drvinfo *info)
+static void __lpc_set_mac(struct netdata_local *pldat, u8 *mac)
+static void __lpc_get_mac(struct netdata_local *pldat, u8 *mac)
+static int lpc_set_mac_address(struct net_device *ndev, void *p)
+static void lpc_eth_set_multicast_list(struct net_device *ndev)
+static u32 lpc_eth_ethtool_getmsglevel(struct net_device *ndev)
+static void lpc_eth_ethtool_setmsglevel(struct net_device *ndev, u32 level)
+static void lpc_eth_enable_int(void __iomem *regbase)
+static void lpc_eth_disable_int(void __iomem *regbase)
+static phy_interface_t lpc_phy_interface_mode(struct device *dev)
+static bool use_iram_for_net(struct device *dev)
+static inline phys_addr_t __va_to_pa(void *addr, struct netdata_local *pldat)
+
+Initalization:
+static int lpc_eth_open(struct net_device *ndev)
+static void __lpc_params_setup(struct netdata_local *pldat)
+static int lpc_eth_drv_probe(struct platform_device *pdev)
+static int lpc_mii_probe(struct net_device *ndev)
+static int lpc_mii_init(struct netdata_local *pldat)
+
+Handlers:
+static int lpc_eth_hard_start_xmit(struct sk_buff *skb, struct net_device *ndev)
+static int lpc_eth_poll(struct napi_struct *napi, int budget)
+static int lpc_eth_ioctl(struct net_device *ndev, struct ifreq *req, int cmd)
+static void lpc_handle_link_change(struct net_device *ndev)
+static int lpc_mdio_read(struct mii_bus *bus, int phy_id, int phyreg)
+static int lpc_mdio_write(struct mii_bus *bus, int phy_id, int phyreg,
+static int lpc_mdio_reset(struct mii_bus *bus)
+static int lpc_eth_close(struct net_device *ndev)
+static int lpc_eth_drv_remove(struct platform_device *pdev)
+static int lpc_eth_drv_suspend(struct platform_device *pdev, pm_message_t state)
+static int lpc_eth_drv_resume(struct platform_device *pdev)
+
