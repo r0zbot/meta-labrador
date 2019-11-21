@@ -13,4 +13,4 @@ until [[ $(docker inspect -f {{.State.Running}} $CONTAINER_NAME) == "true" ]]; d
 done;
 clear
 
-docker exec -it $CONTAINER_NAME bash -c "cd labrador-linux && make ethernet"
+docker exec -it $CONTAINER_NAME bash -c "cd labrador-linux && make ethernet $1"
