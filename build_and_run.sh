@@ -13,7 +13,7 @@ if [[ $1 == "kernel" ]]; then
     ssh root@labrador 'reboot'
 elif [[ $1 == "realtek" ]]; then
     ./build.sh '&& make realtek'
-    ssh root@labrador "rmmod realtek || true"
+    ssh root@labrador "rmmod labrador_eth && rmmod realtek|| true"
     scp data/labrador-linux/linux/drivers/net/phy/realtek.ko root@labrador:/usr/lib/modules/4.14.13/kernel/drivers/net/phy/realtek.ko
     ssh root@labrador "insmod /usr/lib/modules/4.14.13/kernel/drivers/net/phy/realtek.ko" 
 else
