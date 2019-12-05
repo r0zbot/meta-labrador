@@ -19,3 +19,7 @@ Host labrador
     HostName 192.168.192.210
     User root
 ```
+
+## Wiki com informações do projeto
+
+Mais informações sobre a arquitetura da placa estão disponíveis em nossa [wiki](https://github.com/r0zbot/labrador-linux/wiki).
